@@ -31,8 +31,13 @@ public class CSVReader_Writer {
 		catch (FileNotFoundException ex) {ex.printStackTrace();}
 		catch (IOException e) {e.printStackTrace();}
 		finally {
-			try {reader.close();}
-			catch (IOException e) {e.printStackTrace();}
+			if(reader != null) {
+				try {reader.close();}
+				catch (IOException e) {e.printStackTrace();}
+			}
+	        else {
+	            System.out.println("*** Cant close reader ***");
+	        }
 		}
 		return names;
 	}

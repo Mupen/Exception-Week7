@@ -19,7 +19,7 @@ public class Main {
 		try {lastNames = CSVReader_Writer.getLastNames();} 
 		catch (IOException e) {e.printStackTrace();}
 		
-        NameService nameService = new NameService(maleFirstNames, femaleFirstNames,lastNames);
+        NameService nameService = new NameService(maleFirstNames, femaleFirstNames, lastNames);
 
 
         Person test = nameService.getNewRandomPerson();
